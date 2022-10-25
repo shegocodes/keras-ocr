@@ -1,0 +1,6 @@
+jupyter
+keras-ocr
+tensorflow
+matplotlib
+opencv-python
+
