@@ -79,11 +79,11 @@ def distinguish_rows(lst, thresh=15):
 			sublists = [lst[i+1]]
 	yield sublists
 
-def main(image_path, order='yes'):
+def main(image_path, thresh, order='yes'):
 	"""Function returns predictions from left to right & top to bottom"""
 	predictions = detect_w_keras(image_path)
 	predictions = get_distance(predictions)
-	predictions = list(distinguish_rows(predictions, thresh=15))
+	predictions = list(distinguish_rows(predictions, thresh))
 	
 	# Remove all empty rows
 	predictions = list(filter(lambda x:x!=[], predictions))
@@ -104,7 +104,7 @@ if __name__=='__main__':
 	order = args.order
 	
 	print(f'Generating predictions for {image}...')
-	predictions = main(image, order)
+	predictions = main(image, thresh, order)
 	print(predictions)
 
 
