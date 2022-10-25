@@ -27,12 +27,13 @@ def detect_w_keras(image_path):
 
 def get_distance(predictions):
 	"""
-	Function returns dictionary with (key,value):
+	Function returns list of dictionaries with (key,value):
 		* text : detected text in image
 		* center_x : center of bounding box (x)
 		* center_y : center of bounding box (y)
 		* distance_from_origin : hypotenuse
 		* distance_y : distance between y and origin (0,0)
+	...for each bounding box (detections). 
 	"""
 
 	# Point of origin
