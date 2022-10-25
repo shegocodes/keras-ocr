@@ -95,15 +95,15 @@ def main(image_path, order='yes'):
 		if order in ylst: row = sorted(row, key=lambda x:x['distance_from_origin'])
 		for each in row: ordered_preds.append(each['text'])
 	
-	return ' '.join(ordered_preds)
+	return ordered_preds
 
 if __name__=='__main__':
 	
 	image = args.image
 	thresh = args.thresh
 	order = args.order
-	print(image)
-
+	
+	print(f'Generating predictions for {image}...')
 	predictions = main(image, order)
 	print(predictions)
 
