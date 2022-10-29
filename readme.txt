@@ -3,7 +3,7 @@ Improve Keras-OCR to read detected texts in a more 'human' way,
 meaning from left to right and top to bottom. 
 
 
-# Install all necessary libraries
+# Install all necessary libraries (Note: I used a conda environment.)
 pip install -r requirements.txt
 
 
